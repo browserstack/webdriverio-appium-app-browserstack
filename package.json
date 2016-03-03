@@ -1,0 +1,30 @@
+{
+  "name": "webdriverio-browserstack",
+  "version": "1.0.0",
+  "description": "Run WebDriverIO tests on BrowserStack",
+  "main": "webdriverio.browserstack.js",
+  "scripts": {
+    "pretest": "node tests/webdriverio.browserstack.js",
+    "test": "./node_modules/.bin/wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/browserstack/webdriverio-browserstack.git"
+  },
+  "keywords": [
+    "webdriverio",
+    "browserstack",
+    "selenium",
+    "tests"
+  ],
+  "bugs": {
+    "url": "https://github.com/browserstack/webdriverio-browserstack/issues"
+  },
+  "homepage": "https://github.com/browserstack/webdriverio-browserstack#readme",
+  "dependencies": {
+    "webdriverio": "^4.0.3"
+  },
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.2.11"
+  }
+}
