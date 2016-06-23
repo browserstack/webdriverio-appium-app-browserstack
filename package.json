@@ -5,8 +5,8 @@
   "description": "Selenium examples for WebdriverIO and BrowserStack Automate",
   "scripts": {
     "test": "npm run single && npm run local && npm run parallel",
-    "single": "./node_modules/.bin/wdio wdio.conf.js",
-    "parallel": "./node_modules/.bin/wdio wdio.parallel.conf.js",
+    "single": "./node_modules/.bin/wdio conf/single.conf.js",
+    "parallel": "./node_modules/.bin/wdio conf/parallel.conf.js",
     "local": "node scripts/test_local.js"
   },
   "repository": {
