@@ -1,13 +1,13 @@
 {
   "name": "webdriverio-browserstack",
-  "version": "1.0.0",
-  "description": "Run WebDriverIO tests on BrowserStack",
-  "main": "webdriverio.browserstack.js",
+  "version": "0.1.0",
+  "readme": "WendriverIO Integration with [BrowserStack](https://www.browserstack.com)",
+  "description": "Selenium examples for WebdriverIO and BrowserStack Automate",
   "scripts": {
-    "test": "node tests/webdriverio.browserstack.js",
-    "test_single": "./node_modules/.bin/wdio wdio.conf.js",
-    "test_parallel": "./node_modules/.bin/wdio wdio.parallel.conf.js",
-    "test_local": "node scripts/test_local.js"
+    "test": "npm run single && npm run local && npm run parallel",
+    "single": "./node_modules/.bin/wdio wdio.conf.js",
+    "parallel": "./node_modules/.bin/wdio wdio.parallel.conf.js",
+    "local": "node scripts/test_local.js"
   },
   "repository": {
     "type": "git",

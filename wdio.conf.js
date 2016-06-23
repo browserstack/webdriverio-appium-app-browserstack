@@ -7,8 +7,8 @@ exports.config = {
     // should work too though). These services define specific user and key (or access key)
     // values you need to put in here in order to connect to these services.
     //
-    user: process.env.BROWSERSTACK_USERNAME,
-    key: process.env.BROWSERSTACK_ACCESS_KEY,
+    user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
+    key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
     //
     // If you are using Sauce Labs, WebdriverIO takes care to update the job information
     // once the test is done. This option is set to `true` by default.
@@ -24,7 +24,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './tests/specs/*'
+        './tests/specs/single_test.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -44,12 +44,9 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-        os: 'OS X',
-        os_version: 'El Capitan',
-        browser: 'firefox',
-        browser_version: '44',
-        name: 'Example via runner',
-        build: 'Sample WebDriverIO tests'
+        browser: 'chrome',
+        name: 'single_test',
+        build: 'webdriver-browserstack'
     }],
     //
     // ===================
@@ -68,7 +65,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
-    baseUrl: 'https://google.com',
+    baseUrl: '',
     //
     // Default timeout for all waitForXXX commands.
     waitforTimeout: 10000,
