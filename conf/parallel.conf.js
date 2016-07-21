@@ -10,7 +10,7 @@ exports.config = {
 
   maxInstances: 10,
   commonCapabilities: {
-    name: 'single_test',
+    name: 'parallel_test',
     build: 'webdriver-browserstack'
   },
 

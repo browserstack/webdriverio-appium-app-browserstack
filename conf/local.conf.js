@@ -12,7 +12,7 @@ exports.config = {
 
   capabilities: [{
     browser: 'chrome',
-    name: 'single_test',
+    name: 'local_test',
     build: 'webdriver-browserstack',
     'browserstack.local': true
   }],
@@ -46,6 +46,6 @@ exports.config = {
 
   // Code to stop browserstack local after end of test
   onComplete: function (capabilties, specs) {
-    exports.bs_local.stop();
+    exports.bs_local.stop(function() {});
   }
 }
