@@ -3,6 +3,8 @@
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
+<img src = "http://webdriver.io/images/webdriverio.png" height = "100">
+
 ## Setup
 * Clone the repo
 * Install dependencies `npm install`
@@ -26,5 +28,5 @@
 ## Additional Resources
 * [Documentation for writing automate test scripts in Node](https://www.browserstack.com/automate/node)
 * [Customizing your tests on BrowserStack](https://www.browserstack.com/automate/capabilities)
-* [Browsers & mobile devices for selenium testing on BrowserStack](Browsers & Mobile Devices for Selenium Testing)
+* [Browsers & mobile devices for selenium testing on BrowserStack](https://www.browserstack.com/list-of-browsers-and-platforms?product=automate)
 * [Using REST API to access information about your tests via the command-line interface](https://www.browserstack.com/automate/rest-api)
