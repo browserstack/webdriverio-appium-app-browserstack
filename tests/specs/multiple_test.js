@@ -1,5 +1,3 @@
-var assert = require('assert');
-
 var specs = [
   './multiple/test_01.js',
   './multiple/test_02.js',
