@@ -10,18 +10,22 @@ exports.config = {
 
   maxInstances: 10,
   commonCapabilities: {
-    name: 'parallel_test',
-    build: 'webdriver-browserstack'
+    name: 'parallel_appium_test',
+    build: 'webdriver-browserstack',
+    realMobile: true,
+    browserName: 'android',
+    app: 'bs://<hashed app-id>',
+    'browserstack.debug': true
   },
 
   capabilities: [{
-    browser: 'chrome'
-  },{
-    browser: 'firefox'
-  },{
-    browser: 'internet explorer'
-  },{
-    browser: 'safari'
+    device: 'Google Pixel'
+  }, {
+    device: 'Samsung Galaxy S7'
+  }, {
+    device: 'Samsung Galaxy S6'
+  }, {
+    device: 'Google Nexus 9'
   }],
 
   logLevel: 'verbose',
@@ -31,15 +35,15 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
-  
+
   framework: 'mocha',
   mochaOpts: {
-      ui: 'bdd'
+    ui: 'bdd',
+    timeout: 20000
   }
-}
+};
 
 // Code to support common capabilities
 exports.config.capabilities.forEach(function(caps){
   for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
 });
-

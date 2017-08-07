@@ -9,9 +9,13 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    browser: 'chrome',
-    name: 'single_test',
-    build: 'webdriver-browserstack'
+    name: 'single_appium_test',
+    build: 'webdriver-browserstack',
+    realMobile: true,
+    device: 'Samsung Galaxy S7',
+    browserName: 'android',
+    app: 'bs://<hashed app-id>',
+    'browserstack.debug': true
   }],
 
   logLevel: 'verbose',
@@ -21,9 +25,10 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
-  
+
   framework: 'mocha',
   mochaOpts: {
-      ui: 'bdd'
+    ui: 'bdd',
+    timeout: 20000
   }
-}
+};
