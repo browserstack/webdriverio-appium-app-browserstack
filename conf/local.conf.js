@@ -11,10 +11,14 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    browser: 'chrome',
-    name: 'local_test',
+    name: 'local_appium_test',
     build: 'webdriver-browserstack',
-    'browserstack.local': true
+    realMobile: true,
+    device: 'Google Pixel',
+    browserName: 'android',
+    app: 'bs://<hashed app-id>',
+    'browserstack.local': true,
+    'browserstack.debug': true
   }],
 
   logLevel: 'verbose',
@@ -27,7 +31,8 @@ exports.config = {
 
   framework: 'mocha',
   mochaOpts: {
-      ui: 'bdd'
+    ui: 'bdd',
+    timeout: 20000
   },
 
   // Code to start browserstack local before start of test
@@ -48,4 +53,4 @@ exports.config = {
   onComplete: function (capabilties, specs) {
     exports.bs_local.stop(function() {});
   }
-}
+};

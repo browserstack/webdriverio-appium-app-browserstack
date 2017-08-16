@@ -1,10 +1,25 @@
 var assert = require('assert');
 
-describe('Google\'s Search Functionality', function() {
-  it('opens google', function () {
+describe('Search Wikipedia Functionality', function () {
+  it('can find search results', function () {
+    var searchSelector = `~Search Wikipedia`;
+    browser.waitForVisible(searchSelector, 30000);
     browser
-      .url('https://www.google.com/ncr')
-      
-    assert(browser.getTitle().match(/Google/i));
+      .element(searchSelector)
+      .click();
+
+    var insertTextSelector = 'android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")';
+    browser.waitForVisible(insertTextSelector);
+    browser
+      .element(insertTextSelector)
+      .keys('BrowserStack 01')
+      .pause(5000);
+
+    var allProductsName = browser.elements(`android.widget.TextView`).value;
+    assert(allProductsName.length > 0);
+    browser
+      .hideDeviceKeyboard()
+      .back()
+      .pause(3000);
   });
 });
