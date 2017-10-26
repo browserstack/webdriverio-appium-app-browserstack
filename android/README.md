@@ -26,7 +26,7 @@ to the BrowserStack servers using the above API.
 - To run local tests, run `npm run local`
 
 ## Notes
-* You can view your test results on the [BrowserStack automate dashboard](https://www.browserstack.com/app-automate)
+* You can view your test results on the [BrowserStack App Automate dashboard](https://www.browserstack.com/app-automate)
 * Refer [Get Started](https://www.browserstack.com/app-automate/appium-webdriverio) document to configure the capabilities
 * You can export the environment variables for the Username and Access Key of your BrowserStack account
   
