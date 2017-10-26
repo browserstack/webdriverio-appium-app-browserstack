@@ -19,14 +19,15 @@
 
 - If you do not have an .apk file and looking to simply try App Automate, [you can download our sample app and upload](https://www.browserstack.com/app-automate/sample-apps/android/WikipediaSample.apk)
 to the BrowserStack servers using the above API.
+* For running local tests, you can use our [local sample app](https://www.browserstack.com/app-automate/sample-apps/android/LocalSample.apk).
 - Update the desired capability "app" with the App URL returned from the above API call
 - To run a single test, run `npm run single`
 - To run parallel tests, run `npm run parallel`
 - To run local tests, run `npm run local`
 
 ## Notes
-* You can view your test results on the [BrowserStack automate dashboard](https://www.browserstack.com/automate)
-* Refer [Get Started](https://www.browserstack.com/app-automate/get-started#getting-started) document to configure the capabilities
+* You can view your test results on the [BrowserStack automate dashboard](https://www.browserstack.com/app-automate)
+* Refer [Get Started](https://www.browserstack.com/app-automate/appium-webdriverio) document to configure the capabilities
 * You can export the environment variables for the Username and Access Key of your BrowserStack account
   
   ```
@@ -35,4 +36,4 @@ to the BrowserStack servers using the above API.
   ```
   
 ## Additional Resources
-* [Getting Started with App Automate](https://www.browserstack.com/app-automate/get-started)
+* [Getting Started with App Automate](https://www.browserstack.com/app-automate/appium-webdriverio)

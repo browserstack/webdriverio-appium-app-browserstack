@@ -13,8 +13,9 @@ exports.config = {
     name: 'parallel_appium_test',
     build: 'webdriver-browserstack',
     realMobile: true,
-    browserName: 'safari',
-    app: 'bs://087e6ec5995140fd6bbec9b209e714be327680a0',
+    device: 'iPhone 7',
+    automationName: "XCUITest",
+    app: 'bs://<hashed app-id>',
     'browserstack.debug': true
   },
 

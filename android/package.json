@@ -6,12 +6,9 @@
   "scripts": {
     "test": "npm run single && npm run local && npm run parallel",
     "single": "./node_modules/.bin/wdio conf/single.conf.js",
-    "singleIOS": "./node_modules/.bin/wdio ios/conf/single.conf.js",
     "parallel": "./node_modules/.bin/wdio conf/parallel.conf.js",
     "local": "./node_modules/.bin/wdio conf/local.conf.js",
-    "localIOS": "./node_modules/.bin/wdio ios/conf/local.conf.js",
-    "multiple": "./node_modules/.bin/wdio conf/multiple.conf.js",
-    "multipleIOS": "./node_modules/.bin/wdio ios/conf/multiple.conf.js"
+    "multiple": "./node_modules/.bin/wdio conf/multiple.conf.js"
   },
   "repository": {
     "type": "git",

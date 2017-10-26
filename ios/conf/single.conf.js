@@ -4,7 +4,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './ios/tests/specs/single_test.js'
+    './tests/specs/single_test.js'
   ],
   exclude: [],
 
@@ -13,10 +13,9 @@ exports.config = {
     build: 'webdriver-browserstack',
     realMobile: true,
     device: 'iPhone 7',
-    browserName: 'safari',
-    app: 'bs://087e6ec5995140fd6bbec9b209e714be327680a0',
-    'browserstack.debug': true,
-    automationName: "XCUITest"
+    automationName: "XCUITest",
+    app: 'bs://<hashed app-id>',
+    'browserstack.debug': true
   }],
 
   logLevel: 'verbose',
