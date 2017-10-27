@@ -1,10 +1,3 @@
-# webdriverio-appium-app-browserstack
-[WebdriverIO](http://webdriver.io/) Integration with BrowserStack.
-
-![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
-
-<img src = "http://webdriver.io/images/webdriverio.png" height = "100">
-
 ## Setup
 * Clone the repo
 * Install dependencies `npm install`
