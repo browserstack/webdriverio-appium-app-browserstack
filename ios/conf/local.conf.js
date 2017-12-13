@@ -13,9 +13,7 @@ exports.config = {
   capabilities: [{
     name: 'local_appium_test',
     build: 'webdriver-browserstack',
-    realMobile: true,
     device: 'iPhone 7',
-    automationName: "XCUITest",
     app: 'bs://<hashed app-id>',
     'browserstack.local': true,
     'browserstack.debug': true

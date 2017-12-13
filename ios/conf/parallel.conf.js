@@ -12,9 +12,6 @@ exports.config = {
   commonCapabilities: {
     name: 'parallel_appium_test',
     build: 'webdriver-browserstack',
-    realMobile: true,
-    device: 'iPhone 7',
-    automationName: "XCUITest",
     app: 'bs://<hashed app-id>',
     'browserstack.debug': true
   },
@@ -36,7 +33,7 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 20000
+    timeout: 40000
   }
 };
 
