@@ -11,7 +11,6 @@ exports.config = {
   capabilities: [{
     name: 'single_appium_test',
     build: 'webdriver-browserstack',
-    realMobile: true,
     device: 'Samsung Galaxy S7',
     browserName: 'android',
     app: 'bs://<hashed app-id>',

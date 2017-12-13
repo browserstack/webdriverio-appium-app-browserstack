@@ -11,7 +11,6 @@ exports.config = {
   capabilities: [{
     name: 'multiple_appium_test',
     build: 'webdriver-browserstack',
-    realMobile: true,
     device: 'Google Nexus 9',
     browserName: 'android',
     app: 'bs://<hashed app-id>',

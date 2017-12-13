@@ -13,7 +13,6 @@ exports.config = {
   capabilities: [{
     name: 'local_appium_test',
     build: 'webdriver-browserstack',
-    realMobile: true,
     device: 'Google Pixel',
     browserName: 'android',
     app: 'bs://<hashed app-id>',

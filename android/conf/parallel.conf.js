@@ -12,7 +12,6 @@ exports.config = {
   commonCapabilities: {
     name: 'parallel_appium_test',
     build: 'webdriver-browserstack',
-    realMobile: true,
     browserName: 'android',
     app: 'bs://<hashed app-id>',
     'browserstack.debug': true
