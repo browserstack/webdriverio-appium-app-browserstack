@@ -13,7 +13,7 @@ exports.config = {
     build: 'webdriver-browserstack',
     device: 'Samsung Galaxy S7',
     browserName: 'android',
-    app: 'bs://<hashed app-id>',
+    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   }],
 

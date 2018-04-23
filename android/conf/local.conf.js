@@ -15,7 +15,7 @@ exports.config = {
     build: 'webdriver-browserstack',
     device: 'Google Pixel',
     browserName: 'android',
-    app: 'bs://<hashed app-id>',
+    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.local': true,
     'browserstack.debug': true
   }],
