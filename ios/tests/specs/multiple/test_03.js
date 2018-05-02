@@ -1,28 +1,28 @@
 var assert = require('assert');
 
-describe('Log in to Wordpress', function () {
-  it('will throw error on invalid login', function () {
-    var logInButton = `~Log In`;
-    browser.waitForVisible(logInButton, 30000);
+describe('Text Verification', function () {
+  it('should match displayed text with input text', function () {
+    var textButton = `~Text Button`;
+    browser.waitForVisible(textButton, 30000);
     browser
-      .element(logInButton)
+      .element(textButton)
       .click();
 
-    var emailSelector = `~Email address`;
-    browser.waitForVisible(emailSelector, 30000);
+    var textInput = `~Text Input`;
+    browser.waitForVisible(textInput, 30000);
     browser
-      .element(emailSelector)
+      .element(textInput)
       .click()
-      .keys("hello03@browserstack.com");
+      .keys("hello03@browserstack.com"+"\n");
 
-    browser.element(`~Next`).click().pause(5000);
+    var textOutput = `~Text Output`;
+    browser.waitForVisible(textOutput, 30000);
+    var value = browser.getText(textOutput)
 
-    var errorMessage = `~This email address is not registered on WordPress.com.`;
-    var error = browser.element(errorMessage).value;
-    assert(error.ELEMENT.length > 0);
+    if (value === "hello03@browserstack.com")
+      assert(true)
+    else
+      assert(false)
 
-    browser
-      .element(`~Back`).click()
-      .pause(3000);
   });
 });
