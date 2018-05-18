@@ -12,7 +12,7 @@ exports.config = {
   commonCapabilities: {
     name: 'parallel_appium_test',
     build: 'webdriver-browserstack',
-    app: 'bs://<hashed app-id>',
+    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   },
 

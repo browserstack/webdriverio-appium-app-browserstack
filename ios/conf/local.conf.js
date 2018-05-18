@@ -14,7 +14,7 @@ exports.config = {
     name: 'local_appium_test',
     build: 'webdriver-browserstack',
     device: 'iPhone 7',
-    app: 'bs://<hashed app-id>',
+    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.local': true,
     'browserstack.debug': true
   }],
