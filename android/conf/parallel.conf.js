@@ -18,16 +18,12 @@ exports.config = {
   },
 
   capabilities: [{
-    device: 'Google Pixel'
+    device: 'Google Pixel 3'
   }, {
-    device: 'Samsung Galaxy S7'
-  }, {
-    device: 'Samsung Galaxy S6'
-  }, {
-    device: 'Google Nexus 9'
+    device: 'Samsung Galaxy S10e'
   }],
 
-  logLevel: 'verbose',
+  logLevel: 'info',
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',

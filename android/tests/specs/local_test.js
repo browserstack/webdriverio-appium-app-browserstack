@@ -3,21 +3,20 @@ var assert = require('assert');
 
 describe('BrowserStack Local Testing', function () {
   it('can check tunnel working', function () {
-    var searchSelector = 'android=new UiSelector().resourceId("com.example.android.basicnetworking:id/test_action")';
-    browser.waitForVisible(searchSelector, 30000);
-    browser
-      .element(searchSelector)
-      .click();
+    var searchSelector = $('android=new UiSelector().resourceId("com.example.android.basicnetworking:id/test_action")');
+    searchSelector.waitForDisplayed({ timeout: 30000 });
+    searchSelector.click();
 
-    var insertTextSelector = `android.widget.TextView`;
-    browser.waitForVisible(insertTextSelector, 30000);
+    var insertTextSelector = $(`android.widget.TextView`);
+    insertTextSelector.waitForDisplayed({ timeout: 30000 });
 
-    var allTextElements = browser.elements(`android.widget.TextView`).value;
+    var allTextElements = $$(`android.widget.TextView`);
     browser.pause(10000);
 
     var testElement = null;
+
     allTextElements.forEach(function (textElement) {
-      var textContent = browser.elementIdText(textElement['ELEMENT']).value;
+      var textContent = textElement.getText();
       if (textContent.indexOf('The active connection is') !== -1) {
         testElement = textElement;
       }
@@ -30,7 +29,7 @@ describe('BrowserStack Local Testing', function () {
       throw new Error('Cannot find the needed TextView element from app');
     }
 
-    var matchedString = browser.elementIdText(testElement['ELEMENT']).value;
+    var matchedString = testElement.getText();
     console.log(matchedString);
     assert(matchedString.indexOf('The active connection is wifi') !== -1);
     assert(matchedString.indexOf('Up and running') !== -1);

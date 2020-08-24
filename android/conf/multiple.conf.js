@@ -11,13 +11,13 @@ exports.config = {
   capabilities: [{
     name: 'multiple_appium_test',
     build: 'webdriver-browserstack',
-    device: 'Google Nexus 9',
+    device: 'Google Pixel 3',
     browserName: 'android',
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   }],
 
-  logLevel: 'verbose',
+  logLevel: 'info',
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',
