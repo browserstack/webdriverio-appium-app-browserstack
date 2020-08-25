@@ -17,12 +17,12 @@ exports.config = {
   },
 
   capabilities: [{
-    "device": "iPhone 7"
+    "device": "iPhone 11 Pro"
   }, {
-    "device": "iPhone 7 Plus"
+    "device": "iPhone 11 Pro Max"
   }],
 
-  logLevel: 'verbose',
+  logLevel: 'info',
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',

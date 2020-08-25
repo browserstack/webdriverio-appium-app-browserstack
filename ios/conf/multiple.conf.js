@@ -11,12 +11,12 @@ exports.config = {
   capabilities: [{
     name: 'multiple_appium_test',
     build: 'webdriver-browserstack',
-    device: 'iPhone 7',
+    device: 'iPhone 11 Pro',
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   }],
 
-  logLevel: 'verbose',
+  logLevel: 'info',
   coloredLogs: true,
   screenshotPath: './errorShots/',
   baseUrl: '',

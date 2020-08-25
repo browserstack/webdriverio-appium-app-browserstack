@@ -3,19 +3,16 @@ var assert = require('assert');
 
 describe('BrowserStack Local Testing', function () {
   it('can check tunnel working', function () {
-    var searchSelector = `~Test BrowserStackLocal connection`;
-    browser.waitForVisible(searchSelector, 30000);
-    browser
-      .element(searchSelector)
-      .click();
+    var searchSelector = $(`~Test BrowserStackLocal connection`);
+    searchSelector.waitForDisplayed({ timeout: 30000 });
+    searchSelector.click();
 
-    var responseText = `~Response is: Up and running`;
-    browser.waitForVisible(responseText, 30000);
-    var allTextElements = browser.elements(responseText).value;
+    var allTextElements = $$(`~ResultBrowserStackLocal`);
+    browser.pause(10000);
 
     var testElement = null;
     allTextElements.forEach(function (textElement) {
-      var textContent = browser.elementIdText(textElement['ELEMENT']).value;
+      var textContent = textElement.getText();
       if (textContent.indexOf('Up and running') !== -1) {
         testElement = textElement;
       }
@@ -28,7 +25,7 @@ describe('BrowserStack Local Testing', function () {
       throw new Error('Cannot find the Up and running response');
     }
 
-    var matchedString = browser.elementIdText(testElement['ELEMENT']).value;
+    var matchedString = testElement.getText();
     assert(matchedString == 'Response is: Up and running');
   });
 });
