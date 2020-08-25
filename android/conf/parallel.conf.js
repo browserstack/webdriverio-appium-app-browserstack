@@ -1,6 +1,6 @@
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACC_KEY',
+  key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_USERNAME',
 
   updateJob: false,
   specs: [
@@ -13,14 +13,16 @@ exports.config = {
     name: 'parallel_appium_test',
     build: 'webdriver-browserstack',
     browserName: 'android',
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
+    app: process.env.BROWSERSTACK_APP_ID || 'bs://43e2a3ac988980aefbb17270c41df964c39a39c0',
     'browserstack.debug': true
   },
 
   capabilities: [{
-    device: 'Google Pixel 3'
+    device: 'Google Pixel 3',
+    os_version: "9.0"
   }, {
-    device: 'Samsung Galaxy S10e'
+    device: 'Samsung Galaxy S10e',
+    os_version: "9.0"
   }],
 
   logLevel: 'info',
