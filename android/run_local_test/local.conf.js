@@ -6,7 +6,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './tests/specs/local_test.js'
+    './run_local_test/specs/local_test.js'
   ],
   exclude: [],
 

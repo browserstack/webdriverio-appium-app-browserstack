@@ -4,14 +4,14 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './tests/specs/single_test.js'
+    './run_multiple_test/specs/multiple_test.js'
   ],
   exclude: [],
 
   capabilities: [{
-    name: 'single_appium_test',
+    name: 'multiple_appium_test',
     build: 'webdriver-browserstack',
-    device: 'Samsung Galaxy S10e',
+    device: 'Google Pixel 3',
     os_version: "9.0",
     browserName: 'android',
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
@@ -29,6 +29,6 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 20000
+    timeout: 30000
   }
 };

@@ -9,7 +9,7 @@ This repository demonstrates how to run Appium tests using [WebdriverIO](http://
 Code samples to get started with Appium tests for your Native App using WebdriverIO.
 
 ## Setup
------------
+
 ### Requirements
 * Node.js
   - Install at least **v8.11.2 or higher** as this is the oldest active LTS version
@@ -29,7 +29,7 @@ npm i
 ```
 
 ## Getting Started
------------
+
 Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be easier!
 
 ### Run first test:
@@ -50,11 +50,11 @@ Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be 
 
 
 ## Integration with other Java frameworks
------------
+
 For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 
 
 ## Getting Help
------------
+
 If you are running into any issues or have any queries, please check [Browserstack Support page](https://www.browserstack.com/support/app-automate) or [get in touch with us](https://www.browserstack.com/contact?ref=help).
 
