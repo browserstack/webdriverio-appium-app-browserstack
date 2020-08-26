@@ -17,9 +17,11 @@ exports.config = {
   },
 
   capabilities: [{
-    "device": "iPhone 11 Pro"
+    device: "iPhone 11 Pro",
+    os_version: "13"
   }, {
-    "device": "iPhone 11 Pro Max"
+    device: "iPhone 11 Pro Max",
+    os_version: "13"
   }],
 
   logLevel: 'info',
