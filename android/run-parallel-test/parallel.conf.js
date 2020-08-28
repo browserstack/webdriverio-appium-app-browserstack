@@ -10,8 +10,9 @@ exports.config = {
 
   maxInstances: 10,
   commonCapabilities: {
+    project: "First Webdriverio Android Project",
+    build: 'Webdriverio Android Parallel',
     name: 'parallel_appium_test',
-    build: 'webdriver-browserstack',
     browserName: 'android',
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true

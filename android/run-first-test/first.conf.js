@@ -9,8 +9,9 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
+    project: "First Webdriverio Android Project",
+    build: 'Webdriverio Android First',
     name: 'single_appium_test',
-    build: 'webdriver-browserstack',
     device: 'Google Pixel 3',
     os_version: "9.0",
     browserName: 'android',
