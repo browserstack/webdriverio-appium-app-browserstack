@@ -9,8 +9,9 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
+    project: "First Webdriverio iOS Project",
+    build: 'Webdriverio iOS First',
     name: 'single_appium_test',
-    build: 'webdriver-browserstack',
     device: 'iPhone 11 Pro',
     os_version: "13",
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
