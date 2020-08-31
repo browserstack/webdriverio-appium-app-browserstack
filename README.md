@@ -49,7 +49,7 @@ Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be 
 **Note**: If you are facing any issues, refer [Getting Help section](#Getting-Help)
 
 
-## Integration with other Java frameworks
+## Integration with other Javascript frameworks
 
 For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 

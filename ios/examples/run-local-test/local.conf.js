@@ -6,17 +6,16 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './run-local-test/specs/local_test.js'
+    './examples/run-local-test/specs/local_test.js'
   ],
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android Local',
+    project: "First Webdriverio iOS Project",
+    build: 'Webdriverio iOS Local',
     name: 'local_appium_test',
-    device: 'Google Pixel 3',
-    os_version: "9.0",
-    browserName: 'android',
+    device: 'iPhone 11 Pro',
+    os_version: "13",
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.local': true,
     'browserstack.debug': true
@@ -33,7 +32,7 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 20000
+    timeout: 30000
   },
 
   // Code to start browserstack local before start of test
