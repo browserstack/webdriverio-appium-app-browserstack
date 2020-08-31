@@ -4,26 +4,25 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './run-parallel-test/specs/single_test.js'
+    './examples/run-parallel-test/specs/single_test.js'
   ],
   exclude: [],
 
   maxInstances: 10,
   commonCapabilities: {
-    project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android Parallel',
+    project: "First Webdriverio iOS Project",
+    build: 'Webdriverio iOS Parallel',
     name: 'parallel_appium_test',
-    browserName: 'android',
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   },
 
   capabilities: [{
-    device: 'Google Pixel 3',
-    os_version: "9.0"
+    device: "iPhone 11 Pro",
+    os_version: "13"
   }, {
-    device: 'Samsung Galaxy S10e',
-    os_version: "9.0"
+    device: "iPhone 11 Pro Max",
+    os_version: "13"
   }],
 
   logLevel: 'info',
@@ -37,7 +36,7 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 20000
+    timeout: 40000
   }
 };
 

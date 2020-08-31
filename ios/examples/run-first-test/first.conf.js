@@ -4,17 +4,16 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './run-first-test/specs/first_test.js'
+    './examples/run-first-test/specs/first_test.js'
   ],
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android First',
+    project: "First Webdriverio iOS Project",
+    build: 'Webdriverio iOS First',
     name: 'single_appium_test',
-    device: 'Google Pixel 3',
-    os_version: "9.0",
-    browserName: 'android',
+    device: 'iPhone 11 Pro',
+    os_version: "13",
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   }],
@@ -30,6 +29,6 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 20000
+    timeout: 40000
   }
 };
