@@ -12,7 +12,7 @@ exports.config = {
   commonCapabilities: {
     project: "First Webdriverio Android Project",
     build: 'Webdriverio Android Parallel',
-    name: 'parallel_appium_test',
+    name: 'parallel_test',
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   },

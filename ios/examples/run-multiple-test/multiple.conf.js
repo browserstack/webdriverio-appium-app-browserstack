@@ -11,7 +11,7 @@ exports.config = {
   capabilities: [{
     project: "First Webdriverio iOS Project",
     build: 'Webdriverio iOS Multiple',
-    name: 'multiple_appium_test',
+    name: 'multiple_test',
     device: 'iPhone 11 Pro',
     os_version: "13",
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
