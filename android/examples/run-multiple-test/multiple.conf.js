@@ -11,7 +11,7 @@ exports.config = {
   capabilities: [{
     project: "First Webdriverio Android Project",
     build: 'Webdriverio Android Multiple',
-    name: 'multiple_appium_test',
+    name: 'multiple_test',
     device: 'Google Pixel 3',
     os_version: "9.0",
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',

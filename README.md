@@ -11,18 +11,23 @@ Code samples to get started with Appium tests for your Native App using Webdrive
 ## Setup
 
 ### Requirements
-* Node.js
-  - Install at least **v8.11.2 or higher** as this is the oldest active LTS version
-  - If you don't have Node installed, you can get get it installed from [here](https://nodejs.org/en/)
 
-### Install Dependencies
-To install the dependencies for Android tests, run :
+* Node.js 8.11.2+
+  - If you don't have Node installed, download it from [here](https://nodejs.org/en/)
+
+### Install the dependencies
+
+For Android tests, run the following command in project's base directory :
+
 ```sh
 cd android
 npm i
 ```
+
 Or,
-To install the dependencies for iOS tests, run :
+
+For dependencies for iOS tests, run following command in project's base directory :
+
 ```sh
 cd ios
 npm i
@@ -33,26 +38,20 @@ npm i
 Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be easier!
 
 ### Run first test:
-  - Switch to `run-first-test` directory under [Android examples](./android) or [iOS examples](./ios)
+  - Test script is available in `run-first-test` directory under [Android examples](./android) or [iOS examples](./ios)
   - Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio)
 
 ### Speed up test execution with parallel testing :
 
-- Switch to `run-parallel-test` directory under [Android examples](./android) or [iOS examples](./ios)
+- Test script is available in  `run-parallel-test` directory under [Android examples](./android) or [iOS examples](./ios)
 - Follow the steps outlined in the documentation - [Get Started with parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/parallelize-tests)
 
 ### Use Local testing for apps that access resources hosted in development or testing environments :
 
-- Switch to `run-local-test` directory under [Android examples](./android) or [iOS examples](./ios)
+- Test script is available in `run-local-test` directory under [Android examples](./android) or [iOS examples](./ios)
 - Follow the steps outlined in the documentation - [Get Started with Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/local-testing)
 
-**Note**: If you are facing any issues, refer [Getting Help section](#Getting-Help)
-
-
-## Integration with other Javascript frameworks
-
-For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
-
+**Note**: For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 
 ## Getting Help
 
