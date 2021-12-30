@@ -1,7 +1,7 @@
 {
   "name": "webdriverio-appium-app-browserstack",
   "version": "0.1.0",
-  "readme": "WendriverIO Integration with [BrowserStack](https://www.browserstack.com)",
+  "readme": "WebdriverIO Integration with [BrowserStack](https://www.browserstack.com)",
   "description": "Selenium examples for WebdriverIO and BrowserStack App Automate",
   "scripts": {
     "test": "npm run first && npm run local && npm run parallel",
