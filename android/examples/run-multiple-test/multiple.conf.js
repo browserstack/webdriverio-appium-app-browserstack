@@ -9,13 +9,16 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android Multiple',
-    name: 'multiple_test',
-    device: 'Google Pixel 3',
-    os_version: "9.0",
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-    'browserstack.debug': true
+    platformName: "Android",
+    "appium:platformVersion": "9.0",
+    "appium:deviceName": 'Google Pixel 3',
+    "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
+    'bstack:options' : {
+      "projectName" : "First Webdriverio Android Project",
+      "buildName" : "Webdriverio Android Multiple",
+      "sessionName" : "multiple_test",
+      "debug" : "true"
+    }
   }],
 
   logLevel: 'info',
@@ -25,6 +28,7 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
+  services: [['browserstack']],
 
   framework: 'mocha',
   mochaOpts: {
