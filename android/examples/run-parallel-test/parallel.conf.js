@@ -10,19 +10,27 @@ exports.config = {
 
   maxInstances: 10,
   commonCapabilities: {
-    project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android Parallel',
-    name: 'parallel_test',
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-    'browserstack.debug': true
+    platformName: "Android",
+    "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
+    'bstack:options' : {
+      "projectName" : "First Webdriverio Android Project",
+      "buildName" : "Webdriverio Android Parallel",
+      "debug" : "true"
+    }
   },
 
   capabilities: [{
-    device: 'Google Pixel 3',
-    os_version: "9.0"
+    "appium:deviceName": 'Google Pixel 3',
+    "appium:platformVersion": "9.0",
+    'bstack:options' : {
+      "sessionName" : "parallel_test1"
+    }
   }, {
-    device: 'Samsung Galaxy S10e',
-    os_version: "9.0"
+    "appium:deviceName": 'Samsung Galaxy S10e',
+    "appium:platformVersion": "9.0",
+    'bstack:options' : {
+      "sessionName" : "parallel_test2"
+    }
   }],
 
   logLevel: 'info',
@@ -32,6 +40,7 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
+  services: [['browserstack']],
 
   framework: 'mocha',
   mochaOpts: {
@@ -41,6 +50,8 @@ exports.config = {
 };
 
 // Code to support common capabilities
-exports.config.capabilities.forEach(function(caps){
-  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
-});
+var common_caps = exports.config.commonCapabilities
+var caps = exports.config.capabilities
+for (var i in caps){
+  caps[i] = {...caps[i], ...common_caps}
+}
