@@ -1,4 +1,5 @@
 # webdriverio-appium-app-browserstack
+
 This repository demonstrates how to run Appium tests using [WebdriverIO](http://webdriver.io/) on BrowserStack App Automate.
 
 <div align="center">
@@ -8,11 +9,18 @@ This repository demonstrates how to run Appium tests using [WebdriverIO](http://
 
 Code samples to get started with Appium tests for your Native App using WebdriverIO.
 
+## Based on
+
+These code samples are currently based on:
+
+- **WebdriverIO:** `7.20.5`
+- **Protocol:** `W3C`
+
 ## Setup
 
 ### Requirements
 
-* Node.js 8.11.2+
+- Node.js 8.11.2+
   - If you don't have Node installed, download it from [here](https://nodejs.org/en/)
 
 ### Install the dependencies
@@ -38,12 +46,13 @@ npm i
 Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be easier!
 
 ### Run first test:
-  - Test script is available in `run-first-test` directory under [Android examples](./android) or [iOS examples](./ios)
-  - Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio)
+
+- Test script is available in `run-first-test` directory under [Android examples](./android) or [iOS examples](./ios)
+- Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio)
 
 ### Speed up test execution with parallel testing :
 
-- Test script is available in  `run-parallel-test` directory under [Android examples](./android) or [iOS examples](./ios)
+- Test script is available in `run-parallel-test` directory under [Android examples](./android) or [iOS examples](./ios)
 - Follow the steps outlined in the documentation - [Get Started with parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/parallelize-tests)
 
 ### Use Local testing for apps that access resources hosted in development or testing environments :
@@ -56,4 +65,3 @@ Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be 
 ## Getting Help
 
 If you are running into any issues or have any queries, please check [Browserstack Support page](https://www.browserstack.com/support/app-automate) or [get in touch with us](https://www.browserstack.com/contact?ref=help).
-
