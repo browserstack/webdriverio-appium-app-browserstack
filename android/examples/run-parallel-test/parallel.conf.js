@@ -52,6 +52,4 @@ exports.config = {
 // Code to support common capabilities
 var common_caps = exports.config.commonCapabilities
 var caps = exports.config.capabilities
-for (var i in caps){
-  caps[i] = {...caps[i], ...common_caps}
-}
+for (var i in caps) caps[i] = { ...caps[i], ...common_caps };
