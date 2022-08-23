@@ -13,14 +13,14 @@ Code samples to get started with Appium tests for your Native App using Webdrive
 
 These code samples are currently based on:
 
-- **WebdriverIO:** `7.20.5`
+- **WebdriverIO:** `7.23.0`
 - **Protocol:** `W3C`
 
 ## Setup
 
 ### Requirements
 
-- Node.js 8.11.2+
+- Node.js v16.17.0+
   - If you don't have Node installed, download it from [here](https://nodejs.org/en/)
 
 ### Install the dependencies
