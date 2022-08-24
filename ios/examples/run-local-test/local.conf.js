@@ -17,8 +17,8 @@ exports.config = {
 
   capabilities: [{
     platformName: "ios",
-    "appium:platformVersion": "13",
-    "appium:deviceName": 'iPhone 11 Pro',
+    "appium:platformVersion": "12",
+    "appium:deviceName": 'iPhone XS',
     "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'bstack:options' : {
       "projectName" : "First Webdriverio iOS Project",
