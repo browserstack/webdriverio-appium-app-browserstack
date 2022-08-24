@@ -14,7 +14,7 @@ exports.config = {
     "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'bstack:options' : {
       "projectName" : "First Webdriverio Android Project",
-      "buildName" : "Webdriverio Android Parallel",
+      "buildName" : "browserstack-build-1",
       "debug" : "true"
     }
   },
@@ -23,13 +23,13 @@ exports.config = {
     "appium:deviceName": 'Google Pixel 3',
     "appium:platformVersion": "9.0",
     'bstack:options' : {
-      "sessionName" : "parallel_test1"
+      "sessionName" : "BStack parallel_test1"
     }
   }, {
     "appium:deviceName": 'Samsung Galaxy S10e',
     "appium:platformVersion": "9.0",
     'bstack:options' : {
-      "sessionName" : "parallel_test2"
+      "sessionName" : "BStack parallel_test2"
     }
   }],
 

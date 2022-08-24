@@ -14,7 +14,7 @@ exports.config = {
     "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'bstack:options' : {
       "projectName" : "First Webdriverio iOS Project",
-      "buildName" : "Webdriverio iOS Parallel",
+      "buildName" : "browserstack-build-1",
       "debug" : "true"
     }
   },
@@ -23,13 +23,13 @@ exports.config = {
     "appium:deviceName": 'iPhone 11 Pro',
     "appium:platformVersion": "13",
     'bstack:options' : {
-      "sessionName" : "parallel_test1"
+      "sessionName" : "BStack parallel_test1"
     }
   }, {
     "appium:deviceName": 'iPhone 11 Pro Max',
     "appium:platformVersion": "13",
     'bstack:options' : {
-      "sessionName" : "parallel_test2"
+      "sessionName" : "BStack parallel_test2"
     }
   }],
 

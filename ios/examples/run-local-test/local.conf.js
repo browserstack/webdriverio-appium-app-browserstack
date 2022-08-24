@@ -22,8 +22,8 @@ exports.config = {
     "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'bstack:options' : {
       "projectName" : "First Webdriverio iOS Project",
-      "buildName" : "Webdriverio iOS Local",
-      "sessionName" : "local_test",
+      "buildName" : "browserstack-build-1",
+      "sessionName" : "BStack local_test",
       "debug" : "true"
     }
   }],
