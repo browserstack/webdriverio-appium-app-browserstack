@@ -5,7 +5,8 @@ exports.config = {
   // Adding browserstackLocal to browserstack-service to initiate local binary
   services: [
       ['browserstack', {
-          browserstackLocal: true
+          browserstackLocal: true,
+          app: 'assets/SampleLocalIosApp.ipa'
       }]
   ],
 
