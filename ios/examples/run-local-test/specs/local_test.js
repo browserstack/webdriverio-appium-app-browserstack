@@ -25,6 +25,6 @@ describe('BrowserStack Local Testing', () => {
     }
 
     var matchedString = await testElement.getText();
-    assert(matchedString == 'Up and running');
+    assert(matchedString.includes('Up and running'));
   });
 });
