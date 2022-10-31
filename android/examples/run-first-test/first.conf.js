@@ -12,7 +12,6 @@ exports.config = {
     platformName: "Android",
     "appium:platformVersion": "9.0",
     "appium:deviceName": 'Google Pixel 3',
-    "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'bstack:options' : {
       "projectName" : "First Webdriverio Android Project",
       "buildName" : "browserstack-build-1",

@@ -11,7 +11,6 @@ exports.config = {
   maxInstances: 10,
   commonCapabilities: {
     platformName: "ios",
-    "appium:app": process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'bstack:options' : {
       "projectName" : "First Webdriverio iOS Project",
       "buildName" : "browserstack-build-1",
