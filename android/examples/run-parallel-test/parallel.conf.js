@@ -21,15 +21,9 @@ exports.config = {
   capabilities: [{
     "appium:deviceName": 'Google Pixel 3',
     "appium:platformVersion": "9.0",
-    'bstack:options' : {
-      "sessionName" : "BStack parallel_test1"
-    }
   }, {
     "appium:deviceName": 'Samsung Galaxy S10e',
     "appium:platformVersion": "9.0",
-    'bstack:options' : {
-      "sessionName" : "BStack parallel_test2"
-    }
   }],
 
   logLevel: 'info',

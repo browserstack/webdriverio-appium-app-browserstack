@@ -21,15 +21,9 @@ exports.config = {
   capabilities: [{
     "appium:deviceName": 'iPhone 11 Pro',
     "appium:platformVersion": "13",
-    'bstack:options' : {
-      "sessionName" : "BStack parallel_test1"
-    }
   }, {
     "appium:deviceName": 'iPhone 11 Pro Max',
     "appium:platformVersion": "13",
-    'bstack:options' : {
-      "sessionName" : "BStack parallel_test2"
-    }
   }],
 
   logLevel: 'info',

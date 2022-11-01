@@ -15,7 +15,6 @@ exports.config = {
     'bstack:options' : {
       "projectName" : "First Webdriverio Android Project",
       "buildName" : "browserstack-build-1",
-      "sessionName" : "BStack multiple_test",
       "debug" : "true"
     }
   }],
