@@ -10,11 +10,11 @@ exports.config = {
 
   maxInstances: 10,
   commonCapabilities: {
-    project: "First Webdriverio iOS Project",
-    build: 'Webdriverio iOS Parallel',
-    name: 'parallel_test',
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-    'browserstack.debug': true
+    project: "BrowserStack Samples",
+    build: 'browserstack build',
+    name: 'BStack parallel webdriverio-appium',
+    'browserstack.debug': true,
+    'browserstack.source': 'webdriverio-appium:sample-sdk:v1.0'
   },
 
   capabilities: [{
@@ -32,6 +32,14 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
+  services: [
+    [
+      'browserstack',
+      {
+        app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>'
+      }
+    ]
+  ],
 
   framework: 'mocha',
   mochaOpts: {
