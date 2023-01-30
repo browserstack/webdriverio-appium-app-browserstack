@@ -11,14 +11,13 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio iOS Project",
-    build: 'Webdriverio iOS Local',
-    name: 'local_test',
+    project: "BrowserStack Samples",
+    build: 'browserstack build',
+    name: 'BStack local webdriverio-appium',
     device: 'iPhone 11 Pro',
     os_version: "13",
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-    'browserstack.local': true,
-    'browserstack.debug': true
+    'browserstack.debug': true,
+    'browserstack.source': 'webdriverio-appium:sample-sdk:v1.0'
   }],
 
   logLevel: 'info',
@@ -28,37 +27,19 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
+  services: [
+    [
+      'browserstack',
+      { 
+        browserstackLocal: true, opts: { forcelocal: false },
+        app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>'
+      }
+    ]
+  ],
 
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
     timeout: 30000
-  },
-
-  // Code to start browserstack local before start of test
-  onPrepare: (config, capabilities) => {
-    console.log("Connecting local");
-    return new Promise( (resolve, reject) => {
-      exports.bs_local = new browserstack.Local();
-      exports.bs_local.start({'key': exports.config.key }, (error) => {
-        if (error) return reject(error);
-        console.log('Connected. Now testing...');
-
-        resolve();
-      });
-    });
-  },
-
-  // Code to stop browserstack local after end of test
-  onComplete: (capabilties, specs) => {
-    console.log("Closing local tunnel");
-    return new Promise( (resolve, reject) => {
-      exports.bs_local.stop( (error) => {
-        if (error) return reject(error);
-        console.log("Stopped BrowserStackLocal");
-
-        resolve();
-      });
-    });
   }
 };
