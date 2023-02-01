@@ -1,5 +1,3 @@
-var browserstack = require('browserstack-local');
-
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
   key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
@@ -11,13 +9,15 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    project: "BrowserStack Samples",
-    build: 'browserstack build',
-    name: 'BStack local webdriverio-appium',
-    device: 'iPhone 11 Pro',
-    os_version: "13",
-    'browserstack.debug': true,
-    'browserstack.source': 'webdriverio-appium:sample-sdk:v1.0'
+    'bstack:options': {
+      projectName: "BrowserStack Samples",
+      buildName: 'browserstack build',
+      sessionName: 'BStack local webdriverio-appium',
+      deviceName: 'iPhone 11 Pro',
+      osVersion: "13",
+      debug: true,
+      source: 'webdriverio:appium-sample-sdk:v1.0'
+    }
   }],
 
   logLevel: 'info',
@@ -32,7 +32,7 @@ exports.config = {
       'browserstack',
       { 
         browserstackLocal: true, opts: { forcelocal: false },
-        app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>'
+        app: './examples/LocalSample.ipa' || 'bs://<hashed app-id>'
       }
     ]
   ],

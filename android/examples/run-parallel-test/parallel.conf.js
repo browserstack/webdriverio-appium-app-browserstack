@@ -10,19 +10,25 @@ exports.config = {
 
   maxInstances: 10,
   commonCapabilities: {
-    project: "BrowserStack Samples",
-    build: 'browserstack build',
-    name: 'BStack parallel webdriverio-appium',
-    'browserstack.debug': true,
-    'browserstack.source': 'webdriverio-appium:sample-sdk:v1.0'
+    'bstack:options': {
+      projectName: "BrowserStack Samples",
+      buildName: 'browserstack build',
+      sessionName: 'BStack parallel webdriverio-appium',
+      debug: true,
+      source: 'webdriverio:appium-sample-sdk:v1.0'
+    }
   },
 
   capabilities: [{
-    device: 'Google Pixel 3',
-    os_version: "9.0"
+    'bstack:options': {
+      deviceName: 'Google Pixel 3',
+      osVersion: "9.0"
+    }
   }, {
-    device: 'Samsung Galaxy S10e',
-    os_version: "9.0"
+    'bstack:options': {
+      deviceName: 'Samsung Galaxy S10e',
+      osVersion: "9.0"
+    }
   }],
 
   logLevel: 'info',
@@ -36,7 +42,7 @@ exports.config = {
     [
       'browserstack',
       {
-        app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>'
+        app: './examples/WikipediaSample.apk' || 'bs://<hashed app-id>'
       }
     ]
   ],
@@ -50,5 +56,6 @@ exports.config = {
 
 // Code to support common capabilities
 exports.config.capabilities.forEach(function(caps){
-  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
+  for(var i in exports.config.commonCapabilities) 
+    caps[i] = { ...caps[i], ...exports.config.commonCapabilities[i]};
 });
