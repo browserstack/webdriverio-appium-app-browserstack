@@ -9,13 +9,15 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    project: "BrowserStack Samples",
-    build: 'browserstack build',
-    name: 'BStack multiple webdriverio-appium',
-    device: 'iPhone 11 Pro',
-    os_version: "13",
-    'browserstack.debug': true,
-    'browserstack.source': 'webdriverio-appium:sample-sdk:v1.0'
+    'bstack:options': {
+      projectName: "BrowserStack Samples",
+      buildName: 'browserstack build',
+      sessionName: 'BStack multiple webdriverio-appium',
+      deviceName: 'iPhone 11 Pro',
+      osVersion: "13",
+      debug: true,
+      source: 'webdriverio:appium-sample-sdk:v1.0'
+    }
   }],
 
   logLevel: 'info',
@@ -29,7 +31,7 @@ exports.config = {
     [
       'browserstack',
       {
-        app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>'
+        app: './examples/WikipediaSample.apk' || 'bs://<hashed app-id>'
       }
     ]
   ],
