@@ -32,7 +32,7 @@ exports.config = {
       'browserstack',
       { 
         browserstackLocal: true, opts: { forcelocal: false },
-        app: './examples/LocalSample.ipa' || 'bs://<hashed app-id>'
+        app: process.env.BROWSERSTACK_APP_PATH || './examples/LocalSample.ipa'
       }
     ]
   ],
