@@ -42,7 +42,7 @@ exports.config = {
     [
       'browserstack',
       {
-        app: './examples/WikipediaSample.apk' || 'bs://<hashed app-id>'
+        app: process.env.BROWSERSTACK_APP_PATH || './examples/WikipediaSample.apk'
       }
     ]
   ],

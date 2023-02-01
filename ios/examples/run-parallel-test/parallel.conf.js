@@ -42,7 +42,7 @@ exports.config = {
     [
       'browserstack',
       {
-        app: './examples/BStackSampleApp.ipa' || 'bs://<hashed app-id>'
+        app: process.env.BROWSERSTACK_APP_PATH || './examples/BStackSampleApp.ipa'
       }
     ]
   ],
