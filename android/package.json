@@ -4,8 +4,8 @@
   "readme": "WendriverIO Integration with [BrowserStack](https://www.browserstack.com)",
   "description": "Selenium examples for WebdriverIO and BrowserStack App Automate",
   "scripts": {
-    "test": "./node_modules/.bin/wdio examples/run-parallel-test/parallel.conf.js",
-    "local": "./node_modules/.bin/wdio examples/run-local-test/local.conf.js"
+    "test": "npx wdio examples/run-parallel-test/parallel.conf.js",
+    "local": "npx wdio examples/run-local-test/local.conf.js"
   },
   "repository": {
     "type": "git",
