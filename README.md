@@ -53,6 +53,12 @@ Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be 
 
 **Note**: For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 
+## Running your tests
+- To run parallel tests, run `npm run test`
+- To run local test, run `npm run local`
+
+ Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
+
 ## Getting Help
 
 If you are running into any issues or have any queries, please check [Browserstack Support page](https://www.browserstack.com/support/app-automate) or [get in touch with us](https://www.browserstack.com/contact?ref=help).
