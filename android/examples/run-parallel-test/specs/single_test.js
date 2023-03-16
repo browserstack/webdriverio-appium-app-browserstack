@@ -9,7 +9,7 @@ describe('Search Wikipedia Functionality', () => {
     var insertTextSelector = await $('android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")');
     await insertTextSelector.waitForDisplayed({ timeout: 30000 });
 
-    await insertTextSelector.addValue("Browsertack");
+    await insertTextSelector.addValue("BrowserStack");
     await browser.pause(5000);
 
     var allProductsName = await $$(`android.widget.TextView`);
