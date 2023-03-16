@@ -8,7 +8,7 @@ exports.config = {
       { 
         buildIdentifier: '${BUILD_NUMBER}',
         browserstackLocal: true,
-        opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-repo" },
+        opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-ios-repo" },
         app: process.env.BROWSERSTACK_APP_PATH || './examples/LocalSample.ipa'
       }
     ]
