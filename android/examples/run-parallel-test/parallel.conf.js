@@ -2,22 +2,19 @@ exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
   key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
 
-  updateJob: false,
-  specs: [
-    './examples/run-parallel-test/specs/single_test.js'
-  ],
-  exclude: [],
+  hostname: 'hub.browserstack.com',
 
-  maxInstances: 10,
-  commonCapabilities: {
-    'bstack:options': {
-      projectName: "BrowserStack Samples",
-      buildName: 'browserstack build',
-      sessionName: 'BStack parallel webdriverio-appium',
-      debug: true,
-      source: 'webdriverio:appium-sample-sdk:v1.0'
-    }
-  },
+  services: [
+    [
+      'browserstack',
+      {
+        buildIdentifier: '${BUILD_NUMBER}',
+        browserstackLocal: true,
+        opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-repo" },
+        app: process.env.BROWSERSTACK_APP_PATH || './examples/WikipediaSample.apk',
+      }
+    ]
+  ],
 
   capabilities: [{
     'bstack:options': {
@@ -31,6 +28,25 @@ exports.config = {
     }
   }],
 
+  commonCapabilities: {
+    'bstack:options': {
+      projectName: "BrowserStack Samples",
+      buildName: 'browserstack build',
+      sessionName: 'BStack parallel webdriverio-appium',
+      debug: true,
+      networkLogs: true,
+      source: 'webdriverio:appium-sample-sdk:v1.0'
+    }
+  },
+
+  maxInstances: 10,
+
+  updateJob: false,
+  specs: [
+    './examples/run-parallel-test/specs/single_test.js'
+  ],
+  exclude: [],
+
   logLevel: 'info',
   coloredLogs: true,
   screenshotPath: './errorShots/',
@@ -38,14 +54,6 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
-  services: [
-    [
-      'browserstack',
-      {
-        app: process.env.BROWSERSTACK_APP_PATH || './examples/WikipediaSample.apk'
-      }
-    ]
-  ],
 
   framework: 'mocha',
   mochaOpts: {
