@@ -43,7 +43,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './examples/run-parallel-test/specs/single_test.js'
+    './examples/run-sample-test/specs/single_test.js'
   ],
   exclude: [],
 
