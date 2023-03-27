@@ -37,14 +37,9 @@ npm i
 
 Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be easier!
 
-### Run first test:
-  - Test script is available in `run-first-test` directory under [Android examples](./android) or [iOS examples](./ios)
+### Run sample test:
+  - Test script is available in `run-sample-test` directory under [Android examples](./android) or [iOS examples](./ios)
   - Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio)
-
-### Speed up test execution with parallel testing :
-
-- Test script is available in  `run-parallel-test` directory under [Android examples](./android) or [iOS examples](./ios)
-- Follow the steps outlined in the documentation - [Get Started with parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/parallelize-tests)
 
 ### Use Local testing for apps that access resources hosted in development or testing environments :
 
