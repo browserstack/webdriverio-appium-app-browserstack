@@ -10,19 +10,20 @@ exports.config = {
 
   maxInstances: 10,
   commonCapabilities: {
-    project: "First Webdriverio iOS Project",
-    build: 'Webdriverio iOS Parallel',
-    name: 'parallel_test',
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-    'browserstack.debug': true
+    platformName: "ios",
+    'bstack:options' : {
+      "projectName" : "First Webdriverio iOS Project",
+      "buildName" : "browserstack-build-1",
+      "debug" : "true"
+    }
   },
 
   capabilities: [{
-    device: "iPhone 11 Pro",
-    os_version: "13"
+    "appium:deviceName": 'iPhone 11 Pro',
+    "appium:platformVersion": "13",
   }, {
-    device: "iPhone 11 Pro Max",
-    os_version: "13"
+    "appium:deviceName": 'iPhone 11 Pro Max',
+    "appium:platformVersion": "13",
   }],
 
   logLevel: 'info',
@@ -32,6 +33,9 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
+  services: [['browserstack', {
+    app: 'assets/SampleIosApp.ipa'
+  }]],
 
   framework: 'mocha',
   mochaOpts: {
@@ -41,6 +45,6 @@ exports.config = {
 };
 
 // Code to support common capabilities
-exports.config.capabilities.forEach(function(caps){
-  for(var i in exports.config.commonCapabilities) caps[i] = caps[i] || exports.config.commonCapabilities[i];
-});
+var common_caps = exports.config.commonCapabilities
+var caps = exports.config.capabilities
+for (var i in caps) caps[i] = { ...caps[i], ...common_caps };

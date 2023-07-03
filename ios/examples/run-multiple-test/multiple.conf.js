@@ -9,13 +9,14 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio iOS Project",
-    build: 'Webdriverio iOS Multiple',
-    name: 'multiple_test',
-    device: 'iPhone 11 Pro',
-    os_version: "13",
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-    'browserstack.debug': true
+    platformName: "ios",
+    "appium:platformVersion": "13",
+    "appium:deviceName": 'iPhone 11 Pro',
+    'bstack:options' : {
+      "projectName" : "First Webdriverio iOS Project",
+      "buildName" : "browserstack-build-1",
+      "debug" : "true"
+    }
   }],
 
   logLevel: 'info',
@@ -25,6 +26,9 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
+  services: [['browserstack', {
+    app: 'assets/SampleIosApp.ipa'
+  }]],
 
   framework: 'mocha',
   mochaOpts: {

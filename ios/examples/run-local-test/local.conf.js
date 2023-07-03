@@ -1,8 +1,14 @@
-var browserstack = require('browserstack-local');
-
 exports.config = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
   key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+
+  // Adding browserstackLocal to browserstack-service to initiate local binary
+  services: [
+      ['browserstack', {
+          browserstackLocal: true,
+          app: 'assets/SampleLocalIosApp.ipa'
+      }]
+  ],
 
   updateJob: false,
   specs: [
@@ -11,14 +17,14 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    project: "First Webdriverio iOS Project",
-    build: 'Webdriverio iOS Local',
-    name: 'local_test',
-    device: 'iPhone 11 Pro',
-    os_version: "13",
-    app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
-    'browserstack.local': true,
-    'browserstack.debug': true
+    platformName: "ios",
+    "appium:platformVersion": "12",
+    "appium:deviceName": 'iPhone XS',
+    'bstack:options' : {
+      "projectName" : "First Webdriverio iOS Project",
+      "buildName" : "browserstack-build-1",
+      "debug" : "true"
+    }
   }],
 
   logLevel: 'info',
@@ -34,31 +40,4 @@ exports.config = {
     ui: 'bdd',
     timeout: 30000
   },
-
-  // Code to start browserstack local before start of test
-  onPrepare: (config, capabilities) => {
-    console.log("Connecting local");
-    return new Promise( (resolve, reject) => {
-      exports.bs_local = new browserstack.Local();
-      exports.bs_local.start({'key': exports.config.key }, (error) => {
-        if (error) return reject(error);
-        console.log('Connected. Now testing...');
-
-        resolve();
-      });
-    });
-  },
-
-  // Code to stop browserstack local after end of test
-  onComplete: (capabilties, specs) => {
-    console.log("Closing local tunnel");
-    return new Promise( (resolve, reject) => {
-      exports.bs_local.stop( (error) => {
-        if (error) return reject(error);
-        console.log("Stopped BrowserStackLocal");
-
-        resolve();
-      });
-    });
-  }
 };

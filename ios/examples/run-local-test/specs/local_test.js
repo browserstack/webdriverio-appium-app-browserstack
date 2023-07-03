@@ -3,7 +3,7 @@ var assert = require('assert');
 
 describe('BrowserStack Local Testing', () => {
   it('can check tunnel working', async () => {
-    var searchSelector = await $(`~Test BrowserStackLocal connection`);
+    var searchSelector = await $(`~TestBrowserStackLocal`);
     await searchSelector.waitForDisplayed({ timeout: 30000 });
     await searchSelector.click();
 
@@ -25,6 +25,6 @@ describe('BrowserStack Local Testing', () => {
     }
 
     var matchedString = await testElement.getText();
-    assert(matchedString == 'Response is: Up and running');
+    assert(matchedString.includes('Up and running'));
   });
 });
