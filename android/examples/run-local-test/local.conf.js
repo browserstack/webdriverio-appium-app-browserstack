@@ -12,7 +12,7 @@ exports.config = {
 
   capabilities: [{
     project: "First Webdriverio Android Project",
-    build: 'Webdriverio Android Local',
+    build: 'browserstack-build-1',
     name: 'local_test',
     device: 'Google Pixel 3',
     os_version: "9.0",
