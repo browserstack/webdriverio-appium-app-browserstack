@@ -31,8 +31,8 @@ exports.config = {
 
   commonCapabilities: {
     'bstack:options': {
-      projectName: "BrowserStack Samples abc",
-      buildName: 'browserstack build abc',
+      projectName: "BrowserStack Samples",
+      buildName: 'browserstack build',
       sessionName: 'BStack parallel webdriverio-appium',
       debug: true,
       networkLogs: true,
