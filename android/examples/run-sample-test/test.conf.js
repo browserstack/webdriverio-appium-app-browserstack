@@ -8,6 +8,7 @@ exports.config = {
     [
       'browserstack',
       {
+        accessibility: true,
         buildIdentifier: '${BUILD_NUMBER}',
         browserstackLocal: true,
         opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-repo" },
@@ -30,8 +31,8 @@ exports.config = {
 
   commonCapabilities: {
     'bstack:options': {
-      projectName: "BrowserStack Samples",
-      buildName: 'browserstack build',
+      projectName: "BrowserStack Samples abc",
+      buildName: 'browserstack build abc',
       sessionName: 'BStack parallel webdriverio-appium',
       debug: true,
       networkLogs: true,

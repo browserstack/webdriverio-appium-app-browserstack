@@ -2,6 +2,11 @@ var assert = require('assert');
 
 describe('Search Wikipedia Functionality', () => {
   it('can find search results', async () => {
+
+    var skipButton = await $('android=new UiSelector().resourceId("org.wikipedia.alpha:id/fragment_onboarding_skip_button")');
+    await skipButton.waitForDisplayed({ timeout: 30000 });
+    await skipButton.click();
+    
     var searchSelector = await $(`~Search Wikipedia`);
     await searchSelector.waitForDisplayed({ timeout: 30000 });
     await searchSelector.click();
