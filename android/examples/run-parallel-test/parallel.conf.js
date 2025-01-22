@@ -19,13 +19,13 @@ exports.config = {
 
   capabilities: [{
     'bstack:options': {
-      deviceName: 'Google Pixel 3',
-      osVersion: "9.0"
+      deviceName: 'Google Pixel 8',
+      osVersion: "14.0"
     }
   }, {
     'bstack:options': {
-      deviceName: 'Samsung Galaxy S10e',
-      osVersion: "9.0"
+      deviceName: 'Samsung Galaxy S21',
+      osVersion: "11.0"
     }
   }],
 
@@ -44,7 +44,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './examples/run-parallel-test/specs/single_test.js'
+    './specs/single_test.js'
   ],
   exclude: [],
 
@@ -59,7 +59,7 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    timeout: 20000
+    timeout: 40000
   }
 };
 
