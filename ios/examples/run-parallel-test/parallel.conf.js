@@ -16,13 +16,13 @@ exports.config = {
 
   capabilities: [{
     'bstack:options': {
-      deviceName: "iPhone 11 Pro",
-      osVersion: "13"
+      deviceName: "iPhone 14",
+      osVersion: "16"
     }
   }, {
     'bstack:options': {
-      deviceName: "iPhone 11 Pro Max",
-      osVersion: "13"
+      deviceName: "iPhone 13 Pro Max",
+      osVersion: "15"
     }
   }],
 
