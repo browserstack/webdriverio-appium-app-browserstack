@@ -6,6 +6,7 @@ exports.config = {
     [
       'browserstack',
       {
+        accessibility: false,
         buildIdentifier: '${BUILD_NUMBER}',
         browserstackLocal: true,
         opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-repo" },
@@ -41,7 +42,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './examples/run-parallel-test/specs/single_test.js'
+    './specs/single_test.js'
   ],
   exclude: [],
 

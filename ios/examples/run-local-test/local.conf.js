@@ -19,8 +19,8 @@ exports.config = {
       projectName: "BrowserStack Samples",
       buildName: 'browserstack build',
       sessionName: 'BStack local webdriverio-appium',
-      deviceName: 'iPhone 11 Pro',
-      osVersion: "13",
+      deviceName: 'iPhone 14',
+      osVersion: "16",
       debug: true,
       networkLogs: true,
       source: 'webdriverio:appium-sample-sdk:v1.0'
