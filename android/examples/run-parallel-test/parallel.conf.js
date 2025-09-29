@@ -44,7 +44,7 @@ exports.config = {
 
   updateJob: false,
   specs: [
-    './specs/single_test.js'
+    './m*/**'
   ],
   exclude: [],
 
