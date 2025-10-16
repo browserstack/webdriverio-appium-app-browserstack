@@ -20,7 +20,7 @@ describe("BStackDemo Tests Module C", () => {
     // assert(allProductsName.length > 0, 'Search results should be present');
   });
 
-  it("module C - flaky test - random product selection", async () => {
+  it("flaky test - random product selection", async () => {
     const selector = Math.random() > 0.5 ? 'android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")' : 'falseSelector';
     const insertTextSelector = await $(selector);
     await insertTextSelector.waitForDisplayed({ timeout: 30000 });
@@ -35,39 +35,39 @@ describe("BStackDemo Tests Module C", () => {
     assert(allResults.length > 0);
   });
 
-  it("module C - always failing test - missing element 1", async () => {
+  it("always failing test - missing element 1", async () => {
     // Try to click a non-existent element, which should fail
     const nonExistent = await $(`~non-existent-1`);
     await nonExistent.waitForDisplayed({ timeout: 3000 });
     await nonExistent.click(); // Will fail
   });
 
-  it("module C - always passing test - example C", async () => {
+  it("always passing test - example C", async () => {
     assert.equal(true, true);
   });
 
-  it("module C - always passing test - example D", async () => {
+  it("always passing test - example D", async () => {
     assert.equal(true, true);
   });
 
-  it("module C - always failing test - same stacktrace 1", async () => {
+  it("always failing test - same stacktrace 1", async () => {
     // Try to click a non-existent element, which should fail (same selector as below)
     const nonExistent = await $(`~common-error`);
     await nonExistent.waitForDisplayed({ timeout: 3000 });
     await nonExistent.click(); // Will fail
   });
 
-  it("module C - always failing test - same stacktrace 2", async () => {
+  it("always failing test - same stacktrace 2", async () => {
     const nonExistent = await $(`~common-error`);
     await nonExistent.waitForDisplayed({ timeout: 3000 });
     await nonExistent.click(); // Will fail
   });
 
-  it("module C - always passing test - example A", async () => {
+  it("always passing test - example A", async () => {
     assert.strictEqual(1 + 1, 2, 'This test should always pass');
   });
 
-  it("module C - Test with framework-level retry - 2 retries configured", function () {
+  it("Test with framework-level retry - 2 retries configured", function () {
     this.retries(2); // Framework-level retry
     const randomOutcome = Math.random() > 0.7;
     if (!randomOutcome) {
@@ -75,7 +75,7 @@ describe("BStackDemo Tests Module C", () => {
     }
   });
 
-  it("module C - Another Test with framework-level retry - 2 retries configured", function () {
+  it("Another Test with framework-level retry - 2 retries configured", function () {
     this.retries(2); // Framework-level retry
     const randomOutcome = Math.random() > 0.7;
     if (!randomOutcome) {
@@ -83,7 +83,7 @@ describe("BStackDemo Tests Module C", () => {
     }
   });
 
-  it("module C - always passing test - example B", async () => {
+  it("always passing test - example B", async () => {
     assert.strictEqual("Browser" + "Stack", "BrowserStack", 'This test should always pass');
   });
 });
