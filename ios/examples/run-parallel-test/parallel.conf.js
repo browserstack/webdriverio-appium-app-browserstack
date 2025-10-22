@@ -10,7 +10,11 @@ exports.config = {
         buildIdentifier: '${BUILD_NUMBER}',
         browserstackLocal: true,
         opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-repo" },
-        app: process.env.BROWSERSTACK_APP_PATH || './examples/BStackSampleApp.ipa'
+        app: process.env.BROWSERSTACK_APP_PATH || './examples/BStackSampleApp.ipa',
+        testObservability: true,
+        testObservabilityOptions: {
+          buildTag: ['bstack_sample'],
+        }
       }
     ]
   ],
