@@ -2,3 +2,6 @@ node_modules/
 local.log
 errorShots
 .DS_Store
+*.log
+performance-report*.json
+package-lock.json
