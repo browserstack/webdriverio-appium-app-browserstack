@@ -14,8 +14,8 @@ exports.config = {
     project: "First Webdriverio Android Project",
     build: 'Webdriverio Android Local',
     name: 'local_test',
-    device: 'Google Pixel 3',
-    os_version: "9.0",
+    device: 'Samsung Galaxy S22 Ultra ',
+    os_version: "12.0",
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.local': true,
     'browserstack.debug': true
