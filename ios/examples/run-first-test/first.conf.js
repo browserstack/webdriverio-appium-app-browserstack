@@ -12,8 +12,8 @@ exports.config = {
     project: "First Webdriverio iOS Project",
     build: 'Webdriverio iOS',
     name: 'single_test',
-    device: 'iPhone 11 Pro',
-    os_version: "13",
+    device: "iPhone 14 Pro Max ",
+    os_version: "16",
     app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
     'browserstack.debug': true
   }],

@@ -18,11 +18,11 @@ exports.config = {
   },
 
   capabilities: [{
-    device: 'Google Pixel 3',
-    os_version: "9.0"
+    device: 'Samsung Galaxy S22 Ultra ',
+    os_version: "12.0"
   }, {
-    device: 'Samsung Galaxy S10e',
-    os_version: "9.0"
+    device: 'Google Pixel 8 Pro',
+    os_version: "14.0"
   }],
 
   logLevel: 'info',
