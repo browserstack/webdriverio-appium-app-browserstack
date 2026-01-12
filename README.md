@@ -57,3 +57,6 @@ Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be 
 
 If you are running into any issues or have any queries, please check [Browserstack Support page](https://www.browserstack.com/support/app-automate) or [get in touch with us](https://www.browserstack.com/contact?ref=help).
 
+
+## Testing
+This project is tested with BrowserStack.
