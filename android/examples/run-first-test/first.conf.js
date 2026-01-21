@@ -1,6 +1,19 @@
 exports.config = {
-  user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+exports.config = {
+  user: process.env.BROWSERSTACK_USERNAME || 'ericswanson3',
+  key: process.env.BROWSERSTACK_ACCESS_KEY || 'sgqxqVpp6tEWDHtBSUCG',
+  //...
+  capabilities: [{
+    project: "First Webdriverio Android Project",
+    build: "browserstack-build-1",
+    name: "local_test",
+    device: "Google Pixel 3",
+    os_version: "9.0",
+    app: process.env.BROWSERSTACK_APP_ID || 'bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c',
+    'browserstack.local': true
+  }],
+  //...
+};
 
   updateJob: false,
   specs: [
