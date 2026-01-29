@@ -1,5 +1,8 @@
 import path from 'path';
 
+// ts-node in workers: only transpile (no type-check) so Cucumber step defs load; type-check via npm run typecheck
+process.env.TS_NODE_TRANSPILE_ONLY = '1';
+
 type ConfigWithCommon = WebdriverIO.Config & {
   commonCapabilities?: Record<string, object>;
 } & Record<string, unknown>;
@@ -54,7 +57,7 @@ export const config: ConfigWithCommon = {
   maxInstances: 10,
 
   updateJob: false,
-  specs: ['./specs/single_test.ts'],
+  specs: ['./specs/**/*.feature'],
   exclude: [],
 
   logLevel: 'info',
@@ -65,9 +68,10 @@ export const config: ConfigWithCommon = {
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
 
-  framework: 'mocha',
-  mochaOpts: {
-    ui: 'bdd',
+  framework: 'cucumber',
+  cucumberOpts: {
+    requireModule: ['ts-node/register'],
+    require: [path.join(__dirname, 'specs/step_definitions/wikipedia_steps.ts')],
     timeout: 40000,
   },
 };

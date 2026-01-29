@@ -7,8 +7,15 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node", "@wdio/globals/types", "@wdio/mocha-framework"]
+    "types": ["node", "@wdio/globals/types", "@wdio/cucumber-framework"]
   },
   "include": ["examples/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "noImplicitAny": false,
+      "strict": false,
+      "strictNullChecks": false
+    }
+  }
 }

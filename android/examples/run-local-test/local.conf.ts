@@ -1,5 +1,8 @@
 import path from 'path';
 
+// ts-node in workers: only transpile (no type-check) so Cucumber step defs load; type-check via npm run typecheck
+process.env.TS_NODE_TRANSPILE_ONLY = '1';
+
 // WDIO config type allows extra options (updateJob, coloredLogs, etc.) not in strict typings
 export const config: WebdriverIO.Config & Record<string, unknown> = {
   user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
@@ -40,7 +43,7 @@ export const config: WebdriverIO.Config & Record<string, unknown> = {
   ],
 
   updateJob: false,
-  specs: ['./specs/local_test.ts'],
+  specs: ['./specs/**/*.feature'],
   exclude: [],
 
   logLevel: 'info',
@@ -51,9 +54,10 @@ export const config: WebdriverIO.Config & Record<string, unknown> = {
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
 
-  framework: 'mocha',
-  mochaOpts: {
-    ui: 'bdd',
+  framework: 'cucumber',
+  cucumberOpts: {
+    requireModule: ['ts-node/register'],
+    require: [path.join(__dirname, 'specs/step_definitions/local_steps.ts')],
     timeout: 20000,
   },
 };

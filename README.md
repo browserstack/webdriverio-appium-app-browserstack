@@ -6,7 +6,7 @@ This repository demonstrates how to run Appium tests using [WebdriverIO](http://
 <img src = "https://webdriver.io/img/webdriverio.png"  height="140px">
 </div>
 
-Code samples to get started with Appium tests for your Native App using WebdriverIO. The project is written in **TypeScript** and uses [Mocha](https://mochajs.org/) as the test framework.
+Code samples to get started with Appium tests for your Native App using WebdriverIO. The project is written in **TypeScript** and uses [Cucumber](https://cucumber.io/) (Gherkin) as the test framework, with feature files and step definitions.
 
 ## Setup
 
@@ -37,27 +37,28 @@ npm i
 
 Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be easier!
 
-### Run first test:
-  - Test script is available in `run-first-test` directory under [Android examples](./android) or [iOS examples](./ios)
-  - Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio)
+Tests are organized under **`examples/`** in each platform folder:
 
-### Speed up test execution with parallel testing :
+- **`run-local-test`** – Local testing (tunnel) with Cucumber feature files and step definitions
+- **`run-parallel-test`** – Parallel tests on multiple devices
 
-- Test script is available in  `run-parallel-test` directory under [Android examples](./android) or [iOS examples](./ios)
-- Follow the steps outlined in the documentation - [Get Started with parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/parallelize-tests)
+Documentation:
 
-### Use Local testing for apps that access resources hosted in development or testing environments :
-
-- Test script is available in `run-local-test` directory under [Android examples](./android) or [iOS examples](./ios)
-- Follow the steps outlined in the documentation - [Get Started with Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/local-testing)
+- [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio)
+- [Parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/parallelize-tests)
+- [Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/local-testing)
 
 **Note**: For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 
 ## Running your tests
-- To run parallel tests, run `npm run test`
-- To run local test, run `npm run local`
 
- Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
+Run commands from the **`android/`** or **`ios/`** directory (after `npm i` in that directory):
+
+- **Parallel tests:** `npm run test`
+- **Local test:** `npm run local`
+- **TypeScript check:** `npm run typecheck`
+
+Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
 
 ## Getting Help
 
