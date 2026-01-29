@@ -6,13 +6,13 @@ This repository demonstrates how to run Appium tests using [WebdriverIO](http://
 <img src = "https://webdriver.io/img/webdriverio.png"  height="140px">
 </div>
 
-Code samples to get started with Appium tests for your Native App using WebdriverIO.
+Code samples to get started with Appium tests for your Native App using WebdriverIO. The project is written in **TypeScript** and uses [Mocha](https://mochajs.org/) as the test framework.
 
 ## Setup
 
 ### Requirements
 
-* Node.js 8.11.2+
+* Node.js 18+
   - If you don't have Node installed, download it from [here](https://nodejs.org/en/)
 
 ### Install the dependencies

@@ -2,3 +2,8 @@ node_modules/
 local.log
 errorShots
 .DS_Store
+
+*.err
+*/logs
+*/log
+
