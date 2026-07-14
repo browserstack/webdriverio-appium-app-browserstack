@@ -10,7 +10,7 @@ exports.config = {
 
   capabilities: [{
     project: "First Webdriverio iOS Project",
-    build: 'Webdriverio iOS',
+    build: 'browserstack-build-1',
     name: 'single_test',
     device: "iPhone 14 Pro Max ",
     os_version: "16",
