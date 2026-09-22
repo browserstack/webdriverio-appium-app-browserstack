@@ -8,7 +8,8 @@
     "first": "./node_modules/.bin/wdio examples/run-first-test/first.conf.js",
     "parallel": "./node_modules/.bin/wdio examples/run-parallel-test/parallel.conf.js",
     "local": "./node_modules/.bin/wdio examples/run-local-test/local.conf.js",
-    "multiple": "./node_modules/.bin/wdio examples/run-multiple-test/multiple.conf.js"
+    "multiple": "./node_modules/.bin/wdio examples/run-multiple-test/multiple.conf.js",
+    "multi-app": "node examples/run-multi-app-test/upload_apps.js && ./node_modules/.bin/wdio examples/run-multi-app-test/multiapp.conf.js"
   },
   "repository": {
     "type": "git",
