@@ -1,0 +1,10 @@
+{
+	"name": "ride-request-backend",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Local backend for the ride-request-customer.apk / ride-request-rider.apk two-device sample.",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	}
+}

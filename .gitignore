@@ -2,3 +2,4 @@ node_modules/
 local.log
 errorShots
 .DS_Store
+android/examples/run-multi-app-test/app-ids.json
