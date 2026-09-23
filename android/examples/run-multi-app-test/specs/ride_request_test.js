@@ -22,7 +22,11 @@ async function switchToWebView(instance, appPackage, timeoutMs = 20000) {
 
 async function waitForHeadline(instance, expectedText, timeoutMs = 30000) {
   await instance.waitUntil(
-    async () => (await instance.$('#headline').getText()).includes(expectedText),
+    async () => {
+      const el = await instance.$('#headline');
+      const text = await el.getText();
+      return text.includes(expectedText);
+    },
     { timeout: timeoutMs, timeoutMsg: `#headline never showed text containing "${expectedText}"` }
   );
 }
@@ -64,10 +68,12 @@ describe('Ride request multi-app flow', () => {
 
     // STEP 5: Assert both apps show "Ride started"
     await waitForHeadline(browser.riderApp, 'Ride started', 15000);
-    assert.strictEqual(await browser.riderApp.$('#headline').getText(), 'Ride started');
+    const riderHeadlineEl = await browser.riderApp.$('#headline');
+    assert.strictEqual(await riderHeadlineEl.getText(), 'Ride started');
 
     await waitForHeadline(browser.customerApp, 'Ride started', 15000);
-    assert.strictEqual(await browser.customerApp.$('#headline').getText(), 'Ride started');
+    const customerHeadlineEl = await browser.customerApp.$('#headline');
+    assert.strictEqual(await customerHeadlineEl.getText(), 'Ride started');
 
     console.log('Ride request flow completed successfully');
 
