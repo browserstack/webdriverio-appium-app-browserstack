@@ -51,6 +51,11 @@ Getting Started with Appium tests using WebdriverIO on BrowserStack couldn't be 
 - Test script is available in `run-local-test` directory under [Android examples](./android) or [iOS examples](./ios)
 - Follow the steps outlined in the documentation - [Get Started with Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/nodejs/webdriverio/local-testing)
 
+### Run two concurrent sessions from one spec with multi-app / multiremote :
+
+- Test script is available in `run-multi-app-test` directory under [Android examples](./android/examples/run-multi-app-test)
+- A two-device ride-request demo (customer requests a ride, rider accepts, starts it with an OTP read off the customer app) built with WebdriverIO's [multiremote](https://webdriver.io/docs/multiremote/) feature, driving both app sessions from a single spec. See the sample's own [README](./android/examples/run-multi-app-test/README.md) for how it works and how to run it.
+
 **Note**: For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 
 ## Getting Help
